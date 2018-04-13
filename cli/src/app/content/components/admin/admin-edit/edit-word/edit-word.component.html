@@ -1,0 +1,56 @@
+<div class="row" *ngIf="data">
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-lg-12">
+        <carousel [medias]="data.medias" [variableSize]="true">
+          <ng-container *ngFor="let item of data.medias">
+            <ng-container *carouselItem>
+              <div class="item">
+                <img *ngIf="item.id" class="item-image" src="../../../../../assets/images/{{item.file}}">
+                <img *ngIf="!item.id" class="item-image" src="{{item.file}}">
+              </div>
+            </ng-container>
+          </ng-container>
+        </carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="row flex-row">
+      <div class="col-lg-12">
+        <p class="edit-container fullwidth">
+          <i matTooltip="{{tooltips[0]}}" class="material-icons">help</i>
+          <mat-input-container>
+            <input matInput [formControl]="hausaForm" placeholder="Hausa" type="text" name="hausa" [(ngModel)]="data.entry_hausa" required>
+          </mat-input-container>
+        </p>
+        <p class="edit-container fullwidth">
+          <i matTooltip="{{tooltips[1]}}" class="material-icons">help</i>
+          <mat-input-container>
+            <input matInput [formControl]="englishForm" placeholder="English translation" type="text" name="english" [(ngModel)]="data.entry_english" required>
+          </mat-input-container>
+        </p>
+        <p class="edit-container fullwidth">
+          <i matTooltip="{{tooltips[2]}}" class="material-icons">help</i>
+          <mat-select placeholder="Categories" [formControl]="categoryForm" [(ngModel)]="data.categories" multiple>
+            <mat-option *ngFor="let category of categories" [value]="category.id">{{category.hausa}}</mat-option>
+          </mat-select>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="data.id" class="button-container">
+    <button mat-raised-button (click)="saveChanges()">Save Changes</button>
+    <button (click)="dialogRef.close()" mat-raised-button color="warn">Discard Changes</button>
+  </div>
+
+  <div *ngIf="!data.id" class="button-container">
+    <button mat-raised-button (click)="createWord()">Create word</button>
+    <button (click)="dialogRef.close()" mat-raised-button color="warn">Cancel</button>
+  </div>
+
+
+</div>

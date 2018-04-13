@@ -1,0 +1,51 @@
+/*input {
+  border: none;
+  outline: none;
+}
+
+label {
+  @include copy-txt($font-color)
+}
+
+input,
+textarea {
+  outline: none;
+  border: 1px solid $input-border;
+
+
+  &:focus {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @include copy-txt($font-color);
+  color: $grey-light;
+
+  background: $white;
+  border: 1px solid $input-border;
+
+  &:focus {
+    border: 1px solid $blue-dark;
+    color: $font-color;
+  }
+
+  &.filled {
+    border: 1px solid $input-border;
+    border-top-color: $input-border-top;
+    color: $font-color !important;
+  }
+}
+textarea {
+  width: 100%;
+  padding: 15px;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  @include hide-text;
+}*/

@@ -1,0 +1,56 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin mq($type) {
+  @if map-has_key($breakpoints, $type) {
+    @media #{map-get($breakpoints, $type)} {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint #{$type}"
+  }
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-wrapper() {
+  width: 92.5%;
+  margin: 0 auto;
+  max-width: $max-width-s;
+  transition: max-width 0.25s ease-in-out;
+  display: block;
+  position: relative;
+
+  @include mq(desktop-m) {
+    max-width: $max-width-m;
+  }
+
+  @include mq(desktop-l) {
+    max-width: $max-width-l;
+  }
+
+  @include mq(desktop-xl) {
+    max-width: $max-width-xl;
+  }
+}
+
+@mixin hide-text() {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

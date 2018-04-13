@@ -1,0 +1,63 @@
+@font-face{
+  font-family:Circular-light;src:url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-light.woff2) format('woff2'),url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-light.woff) format('woff');font-weight:300;font-style:normal}
+@font-face{
+  font-family:Circular-book;src:url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-book.woff2) format('woff2'),url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-book.woff) format('woff');font-weight:400;font-style:normal}
+@font-face{
+  font-family:Circular-medium;src:url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-medium.woff2) format('woff2'),url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-medium.woff) format('woff');font-weight:500;font-style:normal}
+@font-face{
+  font-family:Circular-bold;src:url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-bold.woff2) format('woff2'),url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-bold.woff) format('woff');font-weight:700;font-style:normal}
+@font-face{
+  font-family:Circular-black;src:url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-black.woff2) format('woff2'),url(https://sp-bootstrap.global.ssl.fastly.net/8.2.0/fonts/circular-black.woff) format('woff');font-weight:900;font-style:normal}
+
+
+@mixin fontstack($typo: circular-medium, $size: 16px, $line: 1, $letter: 1px, $color: $font-color, $weight: 400) {
+
+  @if $typo == circular-light {
+    font-family: "Circular-light";
+  }
+
+  @if $typo == circular-book {
+    font-family: "Circular-book";
+  }
+
+  @if $typo == circular-medium {
+    font-family: "Circular-medium";
+  }
+
+  @if $typo == circular-bold {
+    font-family: "Circular-bold";
+  }
+
+  @if $typo == circular-black {
+    font-family: "Circular-black";
+  }
+
+  font-size: $size;
+  line-height: $line;
+  letter-spacing: $letter;
+  font-weight: $weight;
+  color: $color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin link-nav-primary {
+  @include fontstack(14px, 20px, 0, $font-color-grey, 400);
+  text-decoration: none;
+  position: relative;
+
+  @include mq(desktop-s) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+}
+
+@mixin copy-txt($color) {
+  @include fontstack(14px, 20px, 0 $color, 400);
+
+  @include mq(desktop-l) {
+    @include fontstack(14px * $desktop-l-factor, 20px * $desktop-l-factor, 0, $color, 400);
+  }
+}

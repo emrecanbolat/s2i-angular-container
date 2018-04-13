@@ -1,0 +1,17 @@
+<div class="row" >
+
+  <carousel [withAnim]="true">
+    <ng-container *ngFor="let item of words">
+      <ng-container *carouselItem>
+        <div class="item">
+          <img class="item-image" src="../../../../assets/images/{{item.medias[0].media}}">
+          <div class="item-caption" >
+            <h1>{{item.entry_hausa}}</h1>
+            <h4> {{ getTranslations(item.entries_english) }} </h4>
+          </div>
+        </div>
+
+      </ng-container>
+    </ng-container>
+  </carousel>
+</div>

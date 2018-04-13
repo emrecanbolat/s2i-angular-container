@@ -1,0 +1,111 @@
+.lay-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  @include clearfix;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+
+  &--header {
+    background: $white;
+    border-bottom: 2px solid $nav-bottom-line;
+    z-index: 2;
+    min-width: 768px;
+  }
+
+  &--content {
+    position: relative;
+    padding-bottom: 100px;
+  }
+
+  &--default {
+    width: 92.5%;
+    margin: 0 auto;
+    max-width: $max-width-s;
+    position: relative;
+
+    @include mq(desktop-m) {
+      max-width: $max-width-m;
+    }
+
+    @include mq(desktop-l) {
+      max-width: $max-width-l;
+    }
+
+    @include mq(desktop-xl) {
+      max-width: $max-width-xl;
+    }
+
+  }
+
+  &--full-width {
+    width: 100%;
+    position: relative;
+    @include clearfix();
+  }
+
+  &--top-distance {
+    padding-top: 125px;
+
+    &-small {
+      padding-top: 60px;
+    }
+  }
+}
+
+body{
+  font-family:Circular,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#222326;background-color:#fff;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+  font-family: $font_family_5;
+  font-weight: 900;
+  line-height: 1.1;
+  color: $color_2;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 32px;
+  margin: .5em 0 .25em;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  .small {
+    font-weight: 400;
+    line-height: 1;
+    color: $color_6;
+    font-size: 65%;
+  }
+  small {
+    font-weight: 400;
+    line-height: 1;
+    color: $color_6;
+    font-size: 65%;
+  }
+}
+
+h3 {
+  font-family: $font_family_5;
+  color: $color_2;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.4;
+  .small {
+    font-weight: 400;
+    line-height: 1;
+    color: $color_6;
+    font-size: 65%;
+  }
+  small {
+    font-weight: 400;
+    line-height: 1;
+    color: $color_6;
+    font-size: 65%;
+  }
+  .h1 {
+    margin: .5em 0 .25em;
+  }
+}

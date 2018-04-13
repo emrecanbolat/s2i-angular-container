@@ -1,0 +1,28 @@
+<div class="container" *ngIf="categories">
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="content">
+        <div #thumbnailrow class="row text-center">
+          <div *ngFor="let item of currentCategories" class="col-sm-3">
+            <div [style.height]="minHeight" class="thumbnail" (click)="openEditDialog(item)">
+              <div class="image">
+                <img class="thumb" src="../../../../../assets/images/{{item.media}}">
+              </div>
+
+              <div class="caption">
+                <h3>{{item.hausa}}</h3>
+                <p>{{item.english}}</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-paginator (page)="loadPage()" [length]="categories.length" [pageSize]="pageSize">
+  </mat-paginator>
+
+</div>

@@ -1,0 +1,49 @@
+<div class="row" *ngIf="data">
+
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-lg-12">
+        <img *ngIf="data.media" class="item-image" src="../../../../../assets/images/{{data.media}}">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="row flex-row">
+      <div class="col-lg-12">
+        <p class="edit-container fullwidth">
+          <i matTooltip="{{tooltips[0]}}" class="material-icons">help</i>
+          <mat-input-container>
+            <input matInput [formControl]="hausaForm" placeholder="Hausa" type="text" name="hausa" [(ngModel)]="data.hausa" required>
+          </mat-input-container>
+        </p>
+        <p class="edit-container fullwidth">
+          <i matTooltip="{{tooltips[1]}}" class="material-icons">help</i>
+          <mat-input-container>
+            <input matInput [formControl]="englishForm" placeholder="English translation" type="text" name="english" [(ngModel)]="data.english" required>
+          </mat-input-container>
+        </p>
+        <p class="edit-container fullwidth">
+          <i matTooltip="{{tooltips[1]}}" class="material-icons">help</i>
+          <mat-form-field [floatLabel]="'always'">
+            <input matInput [(colorPicker)]="color" placeholder="Category color"
+                   [style.background]="color" readonly/>
+          </mat-form-field>
+
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="data.id" class="button-container">
+    <button mat-raised-button (click)="saveChanges()">Save Changes</button>
+    <button (click)="dialogRef.close()" mat-raised-button color="warn">Discard Changes</button>
+  </div>
+
+  <div *ngIf="!data.id" class="button-container">
+    <button mat-raised-button (click)="createCategory()">Create category</button>
+    <button (click)="dialogRef.close()" mat-raised-button color="warn">Cancel</button>
+  </div>
+
+</div>

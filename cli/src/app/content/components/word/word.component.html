@@ -1,0 +1,36 @@
+<div *ngIf="word">
+
+  <iframe
+    src="https://platform.twitter.com/widgets/tweet_button.html?size=2&url=http%3A%2F%2Flocalhost%3A%3000%2Fword%2Fids&related=twitterapi%2Ctwitter&hashtags=maganarhannu%2Chausa"
+    width="63"
+    height="20"
+    title="Twitter Tweet Button"
+    scrolling="no"
+    style="border: 0; overflow: hidden">
+  </iframe>
+
+  <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A3000%2Fword%3Fids%3D<%= ids%>&layout=button_count&size=small&mobile_iframe=true&width=103&height=20&appId" width="103" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+  <mat-dialog-content>
+
+    <carousel [variableSize]="true">
+      <ng-container *ngFor="let item of word.medias;">
+        <ng-container *carouselItem>
+          <div class="item">
+            <img src="../../../../assets/images/{{item.media}}" class="item">
+          </div>
+
+        </ng-container>
+      </ng-container>
+    </carousel>
+
+    <div class="settings">
+      <h1>{{word.entry_hausa}}</h1>
+
+      <h4>
+        {{getTranslations()}}
+      </h4>
+    </div>
+  </mat-dialog-content>
+</div>

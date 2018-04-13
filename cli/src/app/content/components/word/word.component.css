@@ -1,0 +1,16 @@
+.settings {
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto; }
+  .settings h1 {
+    margin: 0; }
+  .settings h4 {
+    margin: 0; }
+
+.item {
+  width: auto;
+  max-height: 50vh; }
+
+/*# sourceMappingURL=word.component.css.map */

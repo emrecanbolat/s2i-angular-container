@@ -1,0 +1,26 @@
+<div class="container" *ngIf="medias">
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="content">
+        <div class="row text-center">
+          <div *ngFor="let item of currentMedias" class="col-sm-4">
+            <div class="thumbnail" (click)="selectMedia(item)">
+
+              <div *ngIf="item.flag" class="flag" [style.background-color]="'greenyellow'"></div>
+              <div *ngIf="!item.flag" class="flag" [style.background-color]="'red'"></div>
+
+              <div class="image">
+                <img class="thumb" src="../../../../../assets/images/{{item.media}}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-paginator (page)="loadPage()" [length]="medias.length" [pageSize]="pageSize">
+  </mat-paginator>
+
+</div>

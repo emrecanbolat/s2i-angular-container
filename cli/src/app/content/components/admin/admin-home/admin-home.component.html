@@ -1,0 +1,33 @@
+<div class="container" *ngIf="words">
+  <div class="row">
+
+    <div class="col-lg-12">
+      <div class="content">
+        <div class="row text-center">
+          <div *ngFor="let item of currentWords" class="col-sm-3">
+            <div class="thumbnail" (click)="openEditDialog(item)">
+
+<!--              <div class="close">
+                <i class="material-icons">close</i>
+              </div>-->
+
+              <div class="image">
+                <img class="thumb" src="../../../../../assets/images/{{item.medias[0].file}}">
+              </div>
+
+              <div class="caption">
+                <h3>{{item.entry_hausa}}</h3>
+                <p>{{item.entry_english}}</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-paginator (page)="loadPage()" [length]="words.length" [pageSize]="pageSize">
+  </mat-paginator>
+
+</div>

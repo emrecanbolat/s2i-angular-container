@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACR,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,MAAM;EAElB,YAAY,EAAE,IAAI;EAClB,WAAW,EAAE,IAAI;EAEjB,YAAG;IACD,MAAM,EAAE,CAAC;EAGX,YAAG;IACD,MAAM,EAAE,CAAC;;AAIb,KAAM;EACJ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,IAAI",
+"sources": ["word.component.scss"],
+"names": [],
+"file": "word.component.css"
+}

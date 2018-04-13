@@ -1,0 +1,14 @@
+<nav class="mod-navigation mod-navigation--main mod-navigation--main-desktop">
+  <ul>
+    <li>
+      <a routerLink="/categories" (click)="setActive($event)">Categories</a>
+    </li>
+    <li>
+      <a routerLink="/admin/overview" (click)="setActive($event)">Admin Panel</a>
+    </li>
+    <div class="m-active-line" [style.left]="activeLineStyle.left" [style.width]="activeLineStyle.width"></div>
+  </ul>
+
+</nav>
+
+

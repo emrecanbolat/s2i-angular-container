@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">Sign Up
+
+        </div>
+        <div class="panel-title-right">Already have an account?
+          <a routerLink="/login">Sign In</a>
+        </div>
+      </div>
+
+      <div class="panel-body">
+
+        <form class="formwidth" (ngSubmit)="onSubmit()">
+          <table class="fullwidth" cellspacing="0">
+            <tr>
+              <td>
+                <mat-input-container class="fullwidth">
+                  <input matInput placeholder="First Name" id="firstname" name="firstname" [(ngModel)]="user.first_name" required>
+                </mat-input-container>
+              </td>
+              <td>
+                <mat-input-container class="fullwidth">
+                  <input matInput placeholder="Last Name" id="lastname" name="lastname" [(ngModel)]="user.last_name" required>
+                </mat-input-container>
+              </td>
+            </tr>
+          </table>
+          <p>
+            <mat-input-container class="fullwidth">
+              <input matInput [formControl]="emailForm" placeholder="E-mail address" type="email" id="address" name="address" [(ngModel)]="user.address" required>
+            </mat-input-container>
+          </p>
+          <p>
+            <mat-input-container class="fullwidth">
+              <input matInput placeholder="Username" id="username" name="username" [(ngModel)]="user.username" required>
+            </mat-input-container>
+          </p>
+          <table class="fullwidth" cellspacing="0">
+            <tr>
+              <td>
+                <mat-input-container class="fullwidth">
+                  <input matInput placeholder="Password" type="password" id="password" name="password" [(ngModel)]="user.password" required>
+                </mat-input-container>
+              </td>
+              <td>
+                <mat-input-container class="fullwidth">
+                  <input matInput placeholder="Re-enter password" type="password" id="re-password" name="re-password" [(ngModel)]="re_password" required>
+                </mat-input-container>
+              </td>
+            </tr>
+          </table>
+          <p>
+            <mat-input-container class="fullwidth">
+              <input matInput placeholder="Key" id="key" name="key" [(ngModel)]="user.key" required>
+            </mat-input-container>
+          </p>
+          <p class="input-group">
+            <button type="submit" class="a-button a-button--grey-ghost a-button--center">Submit</button>
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

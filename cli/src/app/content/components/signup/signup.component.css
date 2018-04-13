@@ -1,0 +1,57 @@
+.col-md-6 {
+  float: none;
+  margin: 0 auto; }
+
+.panel {
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px; }
+  .panel .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    background-color: #000;
+    background-image: none;
+    color: white; }
+    .panel .panel-heading .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      color: inherit; }
+    .panel .panel-heading .panel-title-right {
+      float: right;
+      font-size: 85%;
+      position: relative;
+      top: -10px; }
+      .panel .panel-heading .panel-title-right a {
+        color: white; }
+  .panel .panel-body {
+    padding: 15px;
+    padding-top: 30px; }
+    .panel .panel-body:after, .panel .panel-body:before {
+      clear: both;
+      display: table;
+      content: " "; }
+  .panel .panel-footer {
+    border-top: 1px solid #888;
+    padding-top: 15px;
+    font-size: 85%;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .panel .panel-footer::after {
+      clear: both;
+      display: table;
+      content: " "; }
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+.fullwidth {
+  width: 100%; }
+
+/*# sourceMappingURL=signup.component.css.map */

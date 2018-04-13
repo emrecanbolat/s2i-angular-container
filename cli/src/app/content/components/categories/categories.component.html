@@ -1,0 +1,25 @@
+<div class="grid-row">
+  <section class="intro"><h2>Category</h2></section>
+</div>
+<div class="grid-row">
+
+  <div class="grid-col grid-col--4" *ngFor="let item of categories">
+    <div class="grid-content">
+      <div class="thumbnail" routerLink="/category/{{ item.id }}" style="cursor: pointer">
+
+        <div class="image">
+          <img src="../../../../assets/images/{{item.media_url + '.' + item.media_type}}" class="img-responsive" id="thumb">
+        </div>
+
+        <div class="caption">
+          <h3>{{item.cat_hausa}}</h3>
+          <p>{{item.cat_english}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-paginator (page)="loadPage()" [length]="count"
+               [pageSize]="9">
+</mat-paginator>

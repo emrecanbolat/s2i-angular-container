@@ -1,0 +1,47 @@
+<section class="carousel-wrapper" [ngStyle]="wrapperStyle">
+  <div class="inner-container" [ngStyle]="carouselWrapperStyle">
+    <ul class="carousel-inner" #carousel>
+      <ng-container *ngIf="items.length">
+        <li *ngFor="let item of items" class="carousel-item" >
+          <ng-container [ngTemplateOutlet]="item.tpl"></ng-container>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="!items.length">
+        <div class="noimg-container"></div>
+      </ng-container>
+    </ul>
+  </div>
+
+
+  <div *ngIf="!medias" class="carousel-dots">
+    <ul class="carousel-point">
+      <li class="point-inner" *ngFor="let item of items; let index = index;" [class.active]="index == currentSlide" (click)="moveTo(index)"></li>
+    </ul>
+  </div>
+
+  <div *ngIf="medias" class="col-md-12 carousel-more">
+    <div class="col-md-2" *ngFor="let item of [0, 1, 2, 3, 4]">
+      <div *ngIf="medias[item] && medias.length > 1" class="close" (click)="removeMedia(medias[item])">
+        <i class="material-icons">close</i>
+      </div>
+
+      <div #moreInner *ngIf="medias[item] && medias[item].id" class="more-inner" [ngStyle]="{'max-height':columnHeight,'background-image':'url(../../../assets/images/'+medias[item].file +')'}" (click)="moveTo(item)"></div>
+      <div #moreInner *ngIf="medias[item] && !medias[item].id" class="more-inner" [ngStyle]="{'max-height':columnHeight}" (click)="moveTo(item)">
+        <img class="more-inner-img" src="{{medias[item].file}}">
+      </div>
+
+      <div #moreInner #fileInput *ngIf="!medias[item]" class="more-inner" [matMenuTriggerFor]="menu"></div>
+
+      <mat-menu #menu="matMenu">
+        <button (click)="openExistingImages()" mat-menu-item>
+          <span>Choose from existing image</span>
+        </button>
+        <input type="file" (change)="openNewUpload($event)" mat-menu-item>
+          <!--<span>Upload new image</span>-->
+        <button mat-menu-item>
+          <span>Cancel</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</section>
