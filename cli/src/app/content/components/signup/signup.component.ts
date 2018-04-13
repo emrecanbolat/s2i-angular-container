@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {}
 
-  private onSubmit() {
+  public onSubmit() {
     if (this.checkRequiredFields()) {
       this.snackBar.open('Please fill all required fields!', '',{
         duration: 2000,

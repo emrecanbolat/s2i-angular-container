@@ -1,0 +1,154 @@
+// Grid
+
+.grid-row {
+    margin-left: -$grid-distance-half;
+    margin-right: -$grid-distance-half;
+    margin-bottom: $grid-distance;
+    @include clearfix;
+
+    &--big {
+        margin-left: -$grid-distance;
+        margin-right: -$grid-distance;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .grid-col {
+        float: left;
+        display: block;
+        position: relative;
+        margin: 10px;
+        @include clearfix;
+
+
+
+        &--big {
+            padding: 0 $grid-distance;
+        }
+
+        &--12 {
+            width: $grid-12
+        }
+
+        &--11 {
+            @include mq(tablet) {
+                width: $grid-11;
+            }
+        }
+
+        &--10 {
+            @include mq(tablet) {
+                width: $grid-10;
+            }
+        }
+
+        &--9 {
+            @include mq(tablet) {
+                width: $grid-9;
+            }
+        }
+
+        &--8 {
+            @include mq(tablet) {
+                width: $grid-8;
+            }
+        }
+
+        &--7 {
+            @include mq(tablet) {
+                width: $grid-7;
+            }
+        }
+
+        &--6 {
+            @include mq(tablet) {
+                width: $grid-6;
+            }
+        }
+
+        &--5 {
+            @include mq(tablet) {
+                width: $grid-5;
+            }
+        }
+
+        &--4 {
+            @include mq(tablet) {
+                width: $grid-4;
+            }
+        }
+
+        &--3 {
+            @include mq(tablet) {
+                width: $grid-3;
+            }
+        }
+
+        &--2 {
+            @include mq(tablet) {
+                width: $grid-2;
+            }
+        }
+
+        &--1 {
+            @include mq(tablet) {
+                width: $grid-1;
+            }
+        }
+
+        &--push-12 {
+            margin-left: $grid-12;
+        }
+        &--push-11 {
+            margin-left: $grid-11;
+        }
+        &--push-10 {
+            margin-left: $grid-10;
+        }
+        &--push-9 {
+            margin-left: $grid-9;
+        }
+        &--push-8 {
+            margin-left: $grid-8;
+        }
+        &--push-7 {
+            margin-left: $grid-7;
+        }
+        &--push-6 {
+            margin-left: $grid-6;
+        }
+        &--push-5 {
+            margin-left: $grid-5;
+        }
+        &--push-4 {
+            margin-left: $grid-4;
+        }
+        &--push-3 {
+            margin-left: $grid-3;
+        }
+        &--push-2 {
+            margin-left: $grid-2;
+        }
+        &--push-1 {
+            margin-left: $grid-1;
+        }
+
+      .md {
+        position: relative;
+        min-height: 1px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+      }
+
+    }
+
+
+  .grid-content {
+    color: $font-color-grey;
+    background: transparent;
+    border: 2px solid $font-color-grey;
+    padding: 10px;
+  }
+}

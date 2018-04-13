@@ -60,11 +60,11 @@ export class EditWordComponent implements OnInit, OnDestroy {
 
       });
 
-    this.adding = this.mediaService.adding.subscribe( (item) => {
+    this.adding = this.mediaService.adding.subscribe( (item: any) => {
       this.data.medias.pushIfNotExist(item, (e) => { return e.id === item.id})
     });
 
-    this.removing = this.mediaService.removing.subscribe( (item) => {
+    this.removing = this.mediaService.removing.subscribe( (item: any) => {
       for (const {element, index} of this.data.medias.map((element, index) => ({ element, index }))) {
         if (element.id && item.id && (element.id === item.id)) {
           this.data.medias.splice(index,1);

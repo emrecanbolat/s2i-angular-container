@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  private login() {
+  public login() {
     this.userService.login(this.username.value, this.password.value)
       .then( () =>  this.router.navigate(['admin']));
   }

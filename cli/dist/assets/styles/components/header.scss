@@ -1,0 +1,21 @@
+header {
+  .inner-header {
+    @include grid-wrapper;
+  }
+
+  .logo {
+    left: 0;
+    width: 121px;
+    height: 60px;
+    position: absolute;
+    @include flex-center;
+    justify-content: flex-start;
+
+    > a {
+      width: 121px;
+      height: 60px;
+      background: url('../svgs/logo-black.svg') no-repeat;
+      background-size: 100%;
+    }
+  }
+}

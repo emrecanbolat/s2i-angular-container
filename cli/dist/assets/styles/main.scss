@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "globals/variables";
+@import "globals/mixins";
+@import 'globals/grid';
+@import "globals/typography";
+@import "globals/buttons";
+
+@import "globals/grid/grid-mixins";
+@import "globals/grid/grid-framework";
+@import "globals/grid/grid";
+
+//APP
+@import "globals/form";
+
+@import "layouts/lay-wrapper";
+
+@import "components/header";
+@import "components/nav";
+@import "modules/mod-nav";
+
+@import 'atoms/a-buttons';
+
+.headroom {
+  transition: top 200ms linear;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+.headroom--unpinned {
+  top: -60px;
+}
+
+.headroom--unfixed {
+  position: fixed;
+}
+
+#thumb {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}
+
+.intro {
+  background-color: #000;
+  width: 100%;
+  display: inline-block;
+
+  >h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.caption {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #thumbnail {
+    width:100%;
+    height:200px;
+  }
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+body {
+  font-family: Circular-normal,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222326;
+  background-color: #fff;
+}

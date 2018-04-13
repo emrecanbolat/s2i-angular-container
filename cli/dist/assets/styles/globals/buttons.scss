@@ -1,0 +1,376 @@
+@mixin button($type) {
+  @include fontstack(circular-bold, 14px, 0, 0, null 400);
+  outline: none;
+  transition: color 0.15s ease-in-out, background 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  @include flex-center();
+  text-align: left;
+  cursor: pointer;
+  justify-content: flex-start;
+  padding: 7px 15px 7px 10px;
+  min-height: 35px;
+  border-radius: 0;
+  line-height: normal;
+  position: relative;
+
+  @include mq(desktop-l) {
+    font-size: 14px * $desktop-l-factor;
+    line-height: normal;
+  }
+
+  &.a-icon {
+    &:before {
+      font-size: 18px;
+      line-height: normal !important;
+
+      @include mq(desktop-l) {
+        font-size: 18px * $desktop-l-factor;
+        line-height: normal;
+      }
+
+      margin: 0 10px 0 0;
+      transition: color 0.15s ease-in-out;
+      display: inline-block;
+      transform: translate(0, -1px);
+    }
+  }
+
+  @if $type == right-icon {
+    flex-direction: row-reverse;
+    justify-self: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 9px 10px 9px 15px;
+
+    &.a-icon {
+      &:before {
+        margin: 0 0 0 10px;
+        transform: translate(0, -1px);
+      }
+    }
+  }
+
+  @if $type == ie-left {
+    padding: 8px 15px 10px 10px;
+
+    &.a-icon {
+      &:before {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  @if $type == ie-right {
+    padding: 8px 10px 10px 10px;
+
+    &.a-icon {
+      &:before {
+        margin: 0 0 0 10px;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  @if $type == primary {
+    color: $white;
+    background: $orange;
+    border: 2px solid $orange;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background: $orange-dark;
+      border-color: $orange-dark;
+    }
+  }
+
+  @if $type == secondary {
+    color: $white;
+    background: $blue;
+    border: 2px solid $blue;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background: $blue-dark;
+      border-color: $blue-dark;
+    }
+  }
+
+  @if $type == sps {
+    color: $white;
+    background: $tile-color-ps;
+    border: 2px solid $tile-color-ps;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background: $tile-color-ps;
+      border-color: $tile-color-ps;
+    }
+  }
+
+  @if $type == primary-ghost {
+    color: $orange;
+    background: transparent;
+    border: 2px solid $orange;
+
+    &.a-icon {
+      &:before {
+        color: $orange;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background: $orange-dark;
+      border-color: $orange-dark;
+
+      &.a-icon {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @if $type == secondary-ghost {
+    color: $blue;
+    background: transparent;
+    border: 2px solid $blue;
+
+    &.a-icon {
+      &:before {
+        color: $blue;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background: transparent;
+      border: 2px solid $blue;
+
+      &.a-icon {
+        &:before {
+          color: $blue;
+        }
+      }
+
+      &:hover {
+        color: $white;
+        background: $blue-dark;
+        border-color: $blue-dark;
+
+        &.a-icon {
+          &:before {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  @if $type == light-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $font-color;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $font-color;
+        }
+      }
+    }
+  }
+
+  @if $type == grey-ghost {
+    color: $font-color-grey;
+    background: transparent;
+    border: 2px solid $font-color-grey;
+    border-radius: 4px;
+
+    &.a-icon {
+      &:before {
+        color: $font-color-grey;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background: $font-color-grey;
+      border-color: $font-color-grey;
+
+      &.a-icon {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @if $type == smp-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $tile-color-smp;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $tile-color-smp;
+        }
+      }
+    }
+  }
+
+  @if $type == mip-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $tile-color-mip;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $tile-color-mip;
+        }
+      }
+    }
+  }
+
+  @if $type == bap-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $tile-color-bap;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $tile-color-bap;
+        }
+      }
+    }
+  }
+
+  @if $type == sa-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $tile-color-sa;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $tile-color-sa;
+        }
+      }
+    }
+  }
+
+  @if $type == ceo-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $tile-color-ceo;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $tile-color-ceo;
+        }
+      }
+    }
+  }
+
+  @if $type == dr-ghost {
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+
+    &.a-icon {
+      &:before {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      color: $tile-color-dr;
+      background: $white;
+      border-color: $white;
+
+      &.a-icon {
+        &:before {
+          color: $tile-color-dr;
+        }
+      }
+    }
+  }
+}

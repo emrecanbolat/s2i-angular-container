@@ -1,0 +1,123 @@
+$white: #ffffff;
+$black: #000000;
+
+$black-light: #222A2E;
+
+$font-color: #2D373C;
+$font-color-grey-dark: #555f69;
+$font-color-grey: #75899A;
+$font-color-grey-extra-light: #becdd7;
+$font-color-grey-super-extra-light: #ebf0f5;
+$input-border: #cdd9e1;
+$input-border-top: #879baa;
+
+$orange: #faa50a;
+$orange-dark: #eb780a;
+$green: #9AA811;
+$blue: #2387aa;
+$blue-dark: #005578;
+$grey: #555f69;
+$grey-light: #788791;
+
+$tile-color-ps: #9d0e4d;
+$tile-color-smp: #9aa812;
+$tile-color-mip: #849718;
+$tile-color-bap: #607626;
+$tile-color-sa: #8a9fb0;
+$tile-color-ceo: #75899a;
+$tile-color-dr: #005f87;
+
+$navigation-active: #1F749A;
+$nav-bottom-line: #DFE6ED;
+
+$color_1: #000;
+$color_2: inherit;
+$color_4: #50B041;
+$color_6: #919496;
+$color_7: #c1c3c6;
+$color_16: #fff;
+$color_17: #d9dadc;
+$color_18: #616467;
+$color_21: #444;
+$color_28: transparent;
+$color_102: currentColor;
+
+$border_color_26: transparent;
+$border_color_27: #50B041;
+$border_color_29: #222326;
+
+$background_color_1: transparent;
+$background_color_39: #e5e5e5;
+$background_color_40: #000;
+$background_color_43: #d9dadc;
+$background_color_166: currentColor;
+
+$font_family_5: inherit;
+
+
+//max width based on mq
+$max-width-s: 1100px;
+$max-width-m: 1200px;
+$max-width-l: 1350px;
+$max-width-xl: 1800px;
+
+$desktop-l-factor: 1.285;
+
+
+
+$grid-distance: 30px;
+$grid-distance-half: $grid-distance / 2;
+
+$breakpoints: (
+  tablet: "only screen and (min-width: #{0})",
+  desktop-s: "print, only screen and (min-width: #{1024px})",
+  desktop-m: "print, only screen and (min-width: #{1366px})",
+  desktop-l: "print, only screen and (min-width: #{1920px})",
+  desktop-xl: "print, only screen and (min-width: #{2560px})"
+);
+
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+$grid-float-breakpoint:     $screen-sm-min !default;
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+$container-tablet:             (720px + $grid-gutter-width) !default;
+$container-sm:                 $container-tablet !default;
+$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-md:                 $container-desktop !default;
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-lg:                 $container-large-desktop !default;
+
+// GRID
+$grid-12: calc(100% - 30px);
+$grid-11: calc(91.66666667% - 30px);
+$grid-10: calc(83.33333333% - 30px);
+$grid-9: calc(75% - 30px);
+$grid-8: calc(66.66666667% - 30px);
+$grid-7: calc(58.33333333% - 30px);
+$grid-6: calc(50% - 30px);
+$grid-5: calc(41.66666667% - 30px);
+$grid-4: calc(33.33333333% - 30px);
+$grid-3: calc(25% - 30px);
+$grid-2: calc(16.66666667% - 30px);
+$grid-1: calc(8.33333333% - 30px);

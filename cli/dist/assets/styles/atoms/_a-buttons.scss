@@ -1,0 +1,75 @@
+// button atoms
+
+.a-button {
+
+    &--primary {
+        @include button(primary);
+    }
+
+    &--secondary {
+        @include button(secondary);
+    }
+
+    &--primary-ghost {
+        @include button(primary-ghost);
+    }
+
+    &--secondary-ghost {
+        @include button(secondary-ghost);
+    }
+
+    &--light-ghost {
+        @include button(light-ghost);
+    }
+
+    &--grey-ghost {
+        @include button(grey-ghost);
+    }
+
+    &--smp-ghost {
+        @include button(smp-ghost);
+    }
+
+    &--mip-ghost {
+        @include button(mip-ghost);
+    }
+
+    &--bap-ghost {
+        @include button(bap-ghost);
+    }
+
+    &--sa-ghost {
+        @include button(sa-ghost);
+    }
+
+    &--ceo-ghost {
+        @include button(ceo-ghost);
+    }
+
+    &--dr-ghost {
+        @include button(dr-ghost);
+    }
+
+    &--right-icon {
+        @include button(right-icon);
+    }
+
+    &--sps {
+        @include button(sps);
+    }
+
+    &--center {
+        justify-content: center !important;
+
+        &:before {
+            margin: 0;
+            left: 10px;
+            position: absolute;
+        }
+    }
+
+    &--grid {
+        justify-content: flex-start;
+        width: 100%
+    }
+}
